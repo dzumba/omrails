@@ -1,0 +1,28 @@
+$baseFontFamily: Oxygen; /* Définition d'Oxygen comme police de base*/
+@import url(http://fonts.googleapis.com/css?family=Oxygen); /* Import du font depuis la base de Google */
+
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+$btnPrimaryBackground: green;
+
+@import 'bootstrap';
+
+body {
+	padding-top: 60px;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner{
+    @include box-shadow(none !important);
+    border: 0;
+    }
+
+.footer{
+
+	margin-top: 50px; /* decalage du footer de 50px et ajou de gris */
+	color: $grayLight;
+	a {
+		color: $gray; /* lien de couleur gris */
+	}
+}
