@@ -9,7 +9,15 @@
 	<body>
 
 		<%= render 'layouts/header' %>
+		
+<!-- Gives a notice when something happens inb the application-->
 		<div class="container">
+			<% flash.each do |name, msg| %>
+				<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+				<% end %>
+	
+<!--The yield represents everything that is going to be put in the various pages (Home, about, etc.)-->
+
 	<%= yield %>
 
 		<%= render 'layouts/footer' %>
